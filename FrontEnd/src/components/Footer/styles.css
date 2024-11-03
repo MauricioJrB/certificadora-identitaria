@@ -33,4 +33,18 @@
     font-size: 0.9rem;
     color: #666;
   }
+  @media (max-width: 768px) {
+    .footer h3 {
+        font-size: 1rem;
+    }
+    
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+
+    .footer-note {
+        font-size: 0.8rem;
+    }
+}
   
