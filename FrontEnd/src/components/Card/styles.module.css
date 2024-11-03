@@ -13,7 +13,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    max-width: 60%; 
+    max-width: 40%; 
     margin-left: 20px; 
 }
 
