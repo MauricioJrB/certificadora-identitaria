@@ -1,6 +1,7 @@
 import express from "express";
 import db from "./config/dbConnect.js";
 import cors from "cors";
+import superUserRouter from "./routes/SuperUserRouter.js";
 
 const app = express();
 
@@ -15,6 +16,6 @@ app.get("/", (req, res) => {
 
 app.use(cors());
 app.use(express.json());
-
+app.use(superUserRouter);
 
 export default app;
