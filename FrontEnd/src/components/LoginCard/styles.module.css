@@ -58,3 +58,40 @@
   font-weight: 700;
   margin-bottom: .5em;
 } 
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5em; 
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .input, .button {
+        font-size: 0.9em; 
+        padding: 0.8em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 20vh;
+    }
+    .card {
+        width: 325px;
+        height: 500px;
+        padding: 1em; 
+        box-shadow: none; 
+    }
+
+    .title {
+        font-size: 1.5em;
+        margin-bottom: 0.8em;
+    }
+
+    .input, .button {
+        font-size: 1em;
+        padding: 0.7em;
+    }
+}
