@@ -1,42 +1,29 @@
-###Sistema proposto
+# Projeto Bons Flúidos
 
-  O sistema proposto, foi pensando com base no projeto "Bons flúidos", é 
-  uma plataforma que visa combater a pobreza menstrual através de arrecadações 
-  por vaquinhas solidárias. O sistema também conta a funcionalidade de cadastro 
-  de produtos recebidos, e visualização dos pontos de coleta e doações recentes.
+## Descrição
+O **Bons Flúidos** é uma plataforma desenvolvida para combater a pobreza menstrual, facilitando a arrecadação de doações financeiras e a distribuição de produtos essenciais. Através de uma abordagem colaborativa, o sistema permite a realização de vaquinhas solidárias e o registro de doações recebidas, além de exibir pontos de coleta em um mapa interativo e postagens com as últimas doações recebidas.
 
-###O QUE ELE PRETENDE RESOLVER/ATENDER 
- 
- Resolver a falta de distribuição de itens adequados para o ciclo menstrual e 
-servir como informativo de distribuições e doações 
-  
-###REQUISITOS FUNCIONAIS A SEREM IMPLEMENTADOS 
- 
- -  Doação monetária:  
-  Permitir que o usuário faça uma doação através do QRCode do 
-  projeto via pix 
-  
--  Visualização dos pontos de coleta: 
-  Permite que o usuário visualize um mapa com os pontos de coleta 
-  devidamentes identificados 
-  O usuário pode interagir com o mapa, para ver mais informações   
-  sobre o ponto 
-   
-- Postagem de doações recentes:  
-  O sistema exibe postagens que mostram as ultimas doações 
-  recebidas. 
-  
--  Cadastro de doações recebidas: 
-  Pessoas autorizadas do projeto, poderam cadastrar os itens   
-  recebidos por meio físico.
+## Objetivo
+O projeto tem como foco resolver a falta de distribuição de itens adequados para o ciclo menstrual e oferecer um ambiente informativo sobre doações e pontos de distribuição.
 
-###TECNOLOGIAS A SEREM UTILIZADAS (LINGUAGENS, FRAMEWORKS, IDES, SERVIDORES E ETC.); 
- 
- - Linguagem de programação: Javascript 
- - Biblioteca: ReactJS, React Router Dom, Leaflet, QR code generator 
- - Back-end Frameworks: Express.js, Node.js 
- 
- - Banco de Dados: MongoDB(mongoose) 
- - IDE: Visual Studio Code 
- - Controle de versionamento: GIT
- - Deploy: Vercel 
+## Funcionalidades
+- **Doação monetária**: Permite que o usuário faça uma doação por meio de QR Code via PIX.
+- **Visualização dos pontos de coleta**: Exibe um mapa interativo com pontos de coleta identificados, permitindo que o usuário veja mais informações sobre cada ponto.
+- **Postagem de doações recentes**: Exibe postagens sobre as últimas doações recebidas, mantendo a comunidade informada.
+- **Cadastro de doações recebidas**: Autoriza membros do projeto a cadastrar itens recebidos por meio físico, ajudando a manter o controle das doações.
+
+## Tecnologias Utilizadas
+- **Linguagem de Programação**: JavaScript
+- **Bibliotecas de Front-End**: 
+  - [ReactJS](https://reactjs.org/): biblioteca para criação da interface do usuário
+  - [React Router DOM](https://reactrouter.com/): biblioteca para roteamento no React
+  - [Leaflet](https://leafletjs.com/): biblioteca para visualização de mapas
+  - [QRCode Generator](https://github.com/soldair/node-qrcode): geração de QR Code para doações via PIX
+- **Back-End**:
+  - [Express.js](https://expressjs.com/): framework para criação de APIs
+  - [Node.js](https://nodejs.org/): ambiente de execução do JavaScript no servidor
+- **Banco de Dados**: 
+  - [MongoDB](https://www.mongodb.com/) com [Mongoose](https://mongoosejs.com/) para modelagem de dados
+- **IDE**: Visual Studio Code
+- **Controle de Versionamento**: Git
+- **Deploy**: Vercel
