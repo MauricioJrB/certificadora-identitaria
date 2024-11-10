@@ -1,8 +1,5 @@
-
+import { LoginCard } from '../../components/LoginCard';
+import './styles.css';
 export const Login = () => {
-    return (
-        <div>
-            <h1>Collection Point</h1>
-        </div>
-    )
-}
+  return <LoginCard />;
+};

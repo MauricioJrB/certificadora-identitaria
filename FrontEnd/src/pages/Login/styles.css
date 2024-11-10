@@ -1,0 +1,8 @@
+body {
+    background-image: url('../../assets/image/pink-paint-brush-textured-background 1.png'); 
+    background-size: cover;    /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+  }
+  
