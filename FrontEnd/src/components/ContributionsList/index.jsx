@@ -6,8 +6,8 @@ export const ContributionsList = ({ contributions }) => (
     {contributions.map((contrib, index) => (
       <div key={index} className={styles.contributionItem}>
         <h3 className={styles.contributionName}>{contrib.name}</h3>
-        <p className={styles.contributionDescription}>{contrib.contribution}</p>
         <p className={styles.contributionTime}>{contrib.timeAgo}</p>
+        <p className={styles.contributionDescription}>{contrib.contribution}</p>
       </div>
     ))}
   </div>
