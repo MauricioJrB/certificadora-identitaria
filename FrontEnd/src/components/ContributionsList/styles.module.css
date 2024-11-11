@@ -1,36 +1,48 @@
 
 .contributionsContainer {
   display: flex;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
   flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
 }
 
 .contributionItem {
-  margin-bottom: 1em;
-  padding: 1em;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5em 0;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+.contributionItem h3, p{
+  font-size:"24px";
+  font-family: 'Poppins';
 }
 
 .contributionName {
-  font-size: 1.2em;
+ text-align: left;
   font-weight: bold;
-  color: #333;
-}
-
-.contributionTime {
-  font-size: 0.9em;
-  color: #666;
-  margin: 0.5em 0;
+  color: #000000;
 }
 
 .contributionDescription {
-  font-size: 1em;
-  color: #333;
+  
+  color: #000000;
+  margin: 0.2em 0;
+}
+
+.contributionTime {
+
+  color: #000000;
+  text-align: right;
+}
+
+.horizontalLine {
+  display: none;
+}
+
+
+.contributionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
