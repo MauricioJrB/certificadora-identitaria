@@ -2,6 +2,7 @@ import './styles.css';
 import obrigado from '../../assets/image/obrigado.png';
 import qrCode from '../../assets/image/qr.png';
 import { ContributionsList } from '../../components/ContributionsList';
+
 export const Donation = () => {
   const contributions = [
     {
