@@ -1,8 +1,18 @@
+import { LoginCard } from '../../components/LoginCard';
+import './styles.css';
+import React, { useEffect } from 'react';
 
 export const Login = () => {
-    return (
-        <div>
-            <h1>Collection Point</h1>
-        </div>
-    )
-}
+  useEffect(() => {
+    document.body.classList.add('bg');
+
+    return () => {
+      document.body.classList.remove('bg');
+    };
+  }, []);
+  return (
+    <>
+      <LoginCard />
+    </>
+  );
+};

@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import { NavLink } from 'react-router-dom';
-import logo from "../../assets/image/logo_png.png";
+import logo from '../../assets/image/logo_png.png';
 import { useState, useEffect } from 'react';
 
 export const NavBar = () => {
@@ -24,19 +24,42 @@ export const NavBar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`${styles.navbar} ${showNav ? styles.visible : styles.hidden}`}>
+    <nav
+      className={`${styles.navbar} ${showNav ? styles.visible : styles.hidden}`}
+    >
       <NavLink to="/" className={styles.brand}>
         <img src={logo} alt="Logo" className={styles.tam} />
       </NavLink>
       <ul className={styles.links_list}>
         <li>
-          <NavLink to="/" className={({ isActive }) => `${styles.noEffect} ${isActive ? styles.active : ""}`}>Doar</NavLink>
+          <NavLink
+            to="/Donation"
+            className={({ isActive }) =>
+              `${styles.noEffect} ${isActive ? styles.active : ''}`
+            }
+          >
+            Doar
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/CollectionPoint" className={({ isActive }) => `${styles.noEffect} ${isActive ? styles.active : ""}`}>Pontos de doação</NavLink>
+          <NavLink
+            to="/CollectionPoint"
+            className={({ isActive }) =>
+              `${styles.noEffect} ${isActive ? styles.active : ''}`
+            }
+          >
+            Pontos de doação
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/Auth" className={({ isActive }) => `${styles.noEffect} ${isActive ? styles.active : ""}`}>Login</NavLink>
+          <NavLink
+            to="/Auth"
+            className={({ isActive }) =>
+              `${styles.noEffect} ${isActive ? styles.active : ''}`
+            }
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

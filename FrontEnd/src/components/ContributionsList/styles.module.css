@@ -1,0 +1,48 @@
+
+.contributionsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.contributionItem {
+  padding: 0.5em 0;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+.contributionItem h3, p{
+  font-size:"24px";
+  font-family: 'Poppins';
+}
+
+.contributionName {
+  text-align: left;
+  font-weight: bold;
+  color: #000000;
+}
+
+.contributionDescription {
+  
+  color: #000000;
+  margin: 0.2em 0;
+}
+
+.contributionTime {
+
+  color: #000000;
+  text-align: right;
+}
+
+.horizontalLine {
+  display: none;
+}
+
+
+.contributionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

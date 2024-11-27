@@ -1,7 +1,12 @@
+import React from 'react';
+import './styles.css';
+import imgRegister from '../../assets/image/register.png';
+import { RegisterCard } from '../../components/RegisterCard';
 export const Register = () => {
-    return (
-        <div>
-            <h1>Collection Point</h1>
-        </div>
-    )
-}
+  return (
+    <div className="containerRegister">
+      <RegisterCard />
+      <img src={imgRegister} alt="register" className="image" />
+    </div>
+  );
+};

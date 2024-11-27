@@ -1,0 +1,19 @@
+.containerRegister{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 1312px;
+    padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .containerRegister{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+    padding-top: 20px;
+  }
+}

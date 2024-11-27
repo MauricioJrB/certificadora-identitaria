@@ -1,0 +1,98 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 925px;
+}
+.card {
+    width: 640px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    opacity: 0.5;
+}
+.title {
+    font-size: 2.25em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.button {
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    border: 2px solid #ccc; /* Adiciona uma borda de 2px com cor #ccc */
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FF9FC9;
+}
+
+.label {
+  text-align: left;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: .5em;
+} 
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5em; 
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .input, .button {
+        font-size: 0.9em; 
+        padding: 0.8em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 20vh;
+    }
+    .card {
+        width: 325px;
+        height: 500px;
+        padding: 1em; 
+        box-shadow: none; 
+    }
+
+    .title {
+        font-size: 1.5em;
+        margin-bottom: 0.8em;
+    }
+
+    .input, .button {
+        font-size: 1em;
+        padding: 0.7em;
+    }
+}
