@@ -1,8 +1,9 @@
-import productModel from '../models/Product'
-const validator = require("validator");
+import productModel from '../models/Product.js'
+import validator from 'validator';
 
 class DoacaoController {
     static DonationPrduct = async (req, res) => {
+        const validator = validator;
         const {name, description} = req.body;
         
         if(!validator.isLength(name, {min: 5, max: 20})) {
