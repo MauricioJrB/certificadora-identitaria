@@ -1,5 +1,4 @@
 import mongoose, { Schema } from "mongoose";
-
 const SuperUserSchema = new Schema(
   {
     email: { type: String, required: true },
