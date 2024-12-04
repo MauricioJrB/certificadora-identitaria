@@ -1,6 +1,7 @@
 import superUserModel from "../models/SuperUser.js";
 import dotenv from "dotenv";
 import bcrypt from "bcrypt";
+import jsonwebtoken from "jsonwebtoken";
 
 dotenv.config();
 
@@ -9,7 +10,6 @@ class SuperUserController {
 
     const superEmail = String(process.env.SUPER_EMAIL);
     const superPassword = String(process.env.SUPER_PASSWORD);
-
     try {
       const hashedPassword = await bcrypt.hash(superPassword, 10);
 
@@ -27,6 +27,7 @@ class SuperUserController {
 
   static loginSuperUser = async (req, res) => {
     const { email, password } = req.body;
+    const secret = process.env.SECRET;
     let login = false;
     try {
       const superUser = await superUserModel.findOne({ email });
@@ -43,7 +44,10 @@ class SuperUserController {
         return res.status(401).json({ msg: "Invalid password" });
       } else {
         login = true;
-        return res.status(200).json({ msg: "Login successful", login });
+        const token = jsonwebtoken.sign({
+          email:email
+        }, secret)
+        return res.status(200).json({ msg: "Login successful", login, token });
       }
     } catch (error) {
       return res.status(500).json({ msg: "Error logging in", error: error.message });
