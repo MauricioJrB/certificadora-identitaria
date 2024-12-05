@@ -1,22 +1,45 @@
 import styles from './styles.module.css';
 import { useState } from 'react';
+import axios from 'axios';
 
 export const RegisterCard = () => {
   const [nomeDono, setnomeDono] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [donationDate, setDonationDate] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handlenomeDonoChange = (e) => setnomeDono(e.target.value);
   const handleProductDescriptionChange = (e) =>
     setProductDescription(e.target.value);
   const handleDonationDateChange = (e) => setDonationDate(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de submissão do formulário
-    console.log('Nome do doador:', nomeDono);
-    console.log('Descrição do Produto:', productDescription);
-    console.log('Data da doação:', donationDate);
+    setErrorMessage('');
+    setSuccessMessage('');
+
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/produto/cadastro',
+        {
+          name: nomeDono,
+          description: productDescription,
+        },
+      );
+
+      if (response.status === 200) {
+        setSuccessMessage('Produto cadastrado com sucesso!');
+        setnomeDono('');
+        setProductDescription('');
+        setDonationDate('');
+      }
+    } catch (error) {
+      setErrorMessage(
+        'Erro ao cadastrar o produto: ' + error.response?.data?.msg ||
+          error.message,
+      );
+    }
   };
 
   return (
@@ -59,6 +82,8 @@ export const RegisterCard = () => {
         </div>
         <button type="submit">Cadastrar</button>
       </form>
+      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
     </div>
   );
 };
