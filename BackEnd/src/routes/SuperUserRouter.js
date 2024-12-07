@@ -6,6 +6,7 @@ import bdHelpers from '../helpers/bdHelpers.js';
 const router = express.Router();
 
 router.get("/admin/create", SuperUserController.createSuperUser);
-router.post("/admin/login", validToken, SuperUserController.loginSuperUser);
+router.post("/admin/login", SuperUserController.loginSuperUser)
+
 
 export default router;
