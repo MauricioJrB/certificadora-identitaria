@@ -1,6 +1,7 @@
-import React from 'react';
+
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import axios from 'axios';
 import './Styles.css';
 import { ContributionsList } from '../../components/ContributionsList';
 import { NavLink } from 'react-router-dom';

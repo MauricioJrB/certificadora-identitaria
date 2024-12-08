@@ -5,6 +5,7 @@ import superUserRouter from "./routes/SuperUserRouter.js";
 import pontoColetaRouter from "./routes/PontoColetaRouter.js"
 import doacaoRouter from "./routes/DoacaoRouter.js"
 import installRouter from "./routes/Install.js";
+import postRouter from "./routes/PostRouter.js";
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(superUserRouter);
 app.use(pontoColetaRouter);
 app.use(doacaoRouter);
 app.use(installRouter);
+app.use(postRouter);
 
 
 export default app;

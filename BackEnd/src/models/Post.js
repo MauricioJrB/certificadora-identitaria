@@ -3,7 +3,8 @@ import mongoose, { mongo, Schema } from "mongoose";
 const PostSchema = new Schema(
   {
     username: {  type: String, required: true },
-    amount: { type: Number, required: true },
+    contribution: { type: Number, required: true },
+    timeAgo: { type: String, required: true },
   },
   { timestamps: true }
 );
