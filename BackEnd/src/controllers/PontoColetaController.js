@@ -19,12 +19,12 @@ class PontoColetaController {
 
         try{
             const pontoColeta = new pontoColetaModel({
-                cidade: cidade,
-                bairro: bairro,
-                rua: rua,
-                numero: numero,
-                complemento: complemento,
-                cep: cep
+                Cidade: cidade,
+                Bairro: bairro,
+                Rua: rua,
+                Numero: numero,
+                Complemento: complemento,
+                CEP: cep
             })
             const savedPontoColeta = await pontoColeta.save()
             return res.status(201).json(savedPontoColeta);

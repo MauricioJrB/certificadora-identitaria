@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "swagger-autogen": "node src/swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,8 @@
     "express": "^4.21.1",
     "install": "^0.13.0",
     "mongodb": "^6.10.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
     "validator": "^13.12.0"
   },
   "devDependencies": {
