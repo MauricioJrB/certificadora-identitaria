@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './styles.css';
 import imgRegister from '../../assets/image/register.png';
 import { RegisterCard } from '../../components/RegisterCard';
