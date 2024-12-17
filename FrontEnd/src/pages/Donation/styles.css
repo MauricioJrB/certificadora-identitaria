@@ -78,3 +78,29 @@
     height: 400px; 
   }
 }
+.contribution-display {
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInOut 7s infinite;
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+.name, .time, .amount {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px; 
+  line-height: 1.6;
+}

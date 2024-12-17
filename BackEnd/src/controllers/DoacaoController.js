@@ -1,5 +1,6 @@
 import productModel from '../models/Product.js'
 import expressValidator from 'validator';
+import bdHelpers from '../helpers/bdHelpers.js';
 
 class DoacaoController {
     static DonationPrduct = async (req, res) => {
@@ -33,7 +34,8 @@ class DoacaoController {
 
     static getProducts = async (req, res) => {
         try {
-            const products = await productModel.find().exec();
+            const products = await bdHelpers.getAllProducts();
+            console.log(products);
             return res.status(200).json(products);
         } catch (error) {
             return res.status(500).json({msg: "An unexpected error occured", error: error.message});

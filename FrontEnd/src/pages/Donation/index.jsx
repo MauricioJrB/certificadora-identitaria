@@ -7,16 +7,15 @@ import axios from 'axios';
 
 export const Donation = () => {
   const [contributions, setContributions] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-
+  // Buscar dados da API
   useEffect(() => {
     const fetchContributions = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/posts'); 
-          const data = response.data.posts;
-          console.log(data);
+        const response = await axios.get('http://localhost:8000/posts');
+        const data = response.data.posts;
 
-    
         const formattedData = data.map((item) => ({
           name: item.username,
           timeAgo: `Contribuiu há ${item.timeAgo}`,
@@ -32,6 +31,17 @@ export const Donation = () => {
     fetchContributions();
   }, []);
 
+  // Alternar contribuições a cada 5 segundos
+  useEffect(() => {
+    if (contributions.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % contributions.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [contributions]);
+
   return (
     <div className="container">
       <div className="img-container">
@@ -39,7 +49,13 @@ export const Donation = () => {
         <img src={obrigado} alt="obrigado" className="image2" />
       </div>
       <h1 className="title">Últimas Contribuições</h1>
-      <ContributionsList contributions={contributions} />
+
+      
+      {contributions.length > 0 && (
+        <div className="contribution-display">
+          <ContributionsList contributions={[contributions[currentIndex]]} />
+        </div>
+      )}
     </div>
   );
 };

@@ -21,10 +21,11 @@ export const RegisterCard = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/produto/cadastro',
+        'http://localhost:8000/produto/cadastro',
         {
           name: nomeDono,
           description: productDescription,
+          date: donationDate,
         },
       );
 

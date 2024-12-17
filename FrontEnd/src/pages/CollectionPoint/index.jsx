@@ -2,34 +2,58 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
+import {useEffect, useState} from 'react';
 import './Styles.css';
 import { ContributionsList } from '../../components/ContributionsList';
 import { NavLink } from 'react-router-dom';
 export const CollectionPoint = () => {
-  //Informações colocadas para exemplificação do funcionamento da contributionList
+ 
+  const [contributions, setContributions] = useState([]);
+  // const contributions = [
+  //   {
+  //     name: 'Leandro',
+  //     timeAgo: '07/10/2024',
+  //     contribution: 'Doou 5 coletores menstruais',
+  //   },
+  //   {
+  //     name: 'Maurício',
+  //     timeAgo: '09/10/2024',
+  //     contribution: 'Doou 10 pacotes de absorvente',
+  //   },
+  //   {
+  //     name: 'Victor',
+  //     timeAgo: '11/11/2024',
+  //     contribution: 'Doou 20 pacotes de absorvente',
+  //   },
+  //   {
+  //     name: 'Kodi',
+  //     timeAgo: '12/11/2024',
+  //     contribution: 'Doou 13 OB',
+  //   },
+  // ];
 
-  const contributions = [
-    {
-      name: 'Leandro',
-      timeAgo: '07/10/2024',
-      contribution: 'Doou 5 coletores menstruais',
-    },
-    {
-      name: 'Maurício',
-      timeAgo: '09/10/2024',
-      contribution: 'Doou 10 pacotes de absorvente',
-    },
-    {
-      name: 'Victor',
-      timeAgo: '11/11/2024',
-      contribution: 'Doou 20 pacotes de absorvente',
-    },
-    {
-      name: 'Kodi',
-      timeAgo: '12/11/2024',
-      contribution: 'Doou 13 OB',
-    },
-  ];
+  useEffect(() => {
+    const fetchContributions = async () => {
+      try {
+        const response = await axios.get('http://localhost:8000/produtos'); 
+          const data = response.data;
+          console.log(data);
+
+    
+        const formattedData = data.map((item) => ({
+          name: item.name,
+          timeAgo: `Doação realizada em ${item.date}`,
+          contribution: `${item.description}`,
+        }));
+
+        setContributions(formattedData);
+      } catch (error) {
+        console.error('Erro ao buscar os dados da API:', error);
+      }
+    };
+
+    fetchContributions();
+  }, []);
 
   return (
     <div className="container">
