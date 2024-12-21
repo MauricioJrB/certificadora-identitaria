@@ -1,6 +1,6 @@
 import superUserModel from "../models/SuperUser.js";
 import dotenv from "dotenv";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jsonwebtoken from "jsonwebtoken";
 
 dotenv.config();
