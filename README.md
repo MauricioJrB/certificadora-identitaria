@@ -28,7 +28,7 @@ O projeto tem como foco resolver a falta de distribuição de itens adequados pa
 - **Controle de Versionamento**: Git
 - **Deploy**: Vercel
 
-##Links 
+## Links 
 - **Vercel:** https://teste-deploy-ywmi.vercel.app/
 - **Netlify:** https://projetobonsfluidos.netlify.app/
 
